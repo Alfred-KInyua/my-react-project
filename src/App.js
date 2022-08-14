@@ -4,8 +4,8 @@ const App = () => {
   return (
     <>
       <p>My Todos</p>
-      <Todo text="Title one " />
-      <Todo text="Title two" />
+      <Todo text="Fetch Water from the river " />
+      <Todo text="Take a bath" />
     </>
   );
 };

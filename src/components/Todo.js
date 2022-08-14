@@ -6,6 +6,7 @@ const Todo = (props) => {
   const [modalOpen, setModalOPen] = useState(false);
   const deleteHandler = () => {
     setModalOPen(true);
+    console.log(modalOpen);
   };
   const closeMOdalHandler = () => {
     setModalOPen(false);
@@ -19,9 +20,9 @@ const Todo = (props) => {
           Delete{" "}
         </button>
       </div>
-      {modalOpen ? (
-        <Modal onCancel={closeMOdalHandler} onConfirm={closeMOdalHandler} />
-      ) : null}
+      {/* Modal and Backdrop are custome elements as such dont have onClickREceived (should just be onClick) defined there in 
+      so we need to push onClick to modal and back drop and define the ONCLICK event handler there in as props  */}
+      {modalOpen ? <Modal onClickReceived={closeMOdalHandler} /> : null}
       {modalOpen && <Backdrop onClick={closeMOdalHandler} />}
     </div>
   );

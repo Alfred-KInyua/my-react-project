@@ -1,17 +1,13 @@
 const Modal = (props) => {
-  const cancelHandler = () => {
-    props.onCancel();
-  };
-  const confirmHandler = () => {
-    props.onConfirm();
-  };
   return (
     <div className="modal">
       <p>Are you sure? </p>
-      <button className="btn btn--alt" onClick={cancelHandler}>
+      {/* We only received {props.ONCLICKreceived<= This one, inside the curly braces then since button is not a custom element we applied onClick which 
+        has been defined there in } */}
+      <button className="btn btn--alt" onClick={props.onClickReceived}>
         Cancel
       </button>
-      <button className="btn" onClick={confirmHandler}>
+      <button className="btn" onClick={props.onClickReceived}>
         Confirm
       </button>
     </div>
