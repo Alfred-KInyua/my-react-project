@@ -1,9 +1,10 @@
-const App=()=>{
-  return(
+import Todo from "./components/Todo";
+const App = () => {
+  return (
     <>
-    <p>Hello World</p>
+      <p>My Todos</p>
+      <Todo />
     </>
-  
-  )
-}
+  );
+};
 export default App;
